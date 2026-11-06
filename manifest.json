@@ -3,8 +3,11 @@
     "name": "Weather Rock",
     "description": "An extension for the weather rock to tell you the weather.",
     "version": "1.0",
+    "icons": {
+
+    },
     "action": {
-        "default-title": "Weather Rock",
-        "default-popup": "popup.html"
+        "default_title": "Weather Rock",
+        "default_popup": "popup.html"
     }
 }
