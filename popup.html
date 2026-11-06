@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="popup.js" defer></script>
     <link rel="stylesheet" href="popup.css">
 </head>
@@ -12,11 +14,28 @@
         </div>
         <div id="vr"></div>
         <div id="weather">
-            <div id="temperature"></div>
-            <div id="humidity"></div>
-            <div id="wind"></div>
-            <div id="rainChance"></div>
-            <div id="UVindex"></div>
+            <div id="tempWrapper">
+                <div id="temp">11°C</div>
+                <p id="tempwords">Overcast Clouds</p>
+                <div id="feelslike">Feels like 10°</div>
+                <div id="highlow">H: 11 L: 8</div>
+            </div>
+            <div id="humidityWrapper">
+                Humidity
+                <div id="humidity"></div>
+            </div>
+            <div id="windWrapper">
+                Wind
+                <div id="wind"></div>
+            </div>
+            <div id="rainChanceWrapper">
+                Rain Chance
+                <div id="rainChance"></div>
+            </div>
+            <div id="UVindexWrapper">
+                UV Index
+                <div id="UVindex"></div>
+            </div>
         </div>
     </div>
 </body>
