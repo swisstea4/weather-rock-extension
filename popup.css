@@ -68,3 +68,8 @@ body *{
 
     font-size: 13.5px;
 }
+#highlow {
+    position: absolute;
+    left: 5%;
+    top: 25%;
+}
