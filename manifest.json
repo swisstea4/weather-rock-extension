@@ -1,11 +1,8 @@
 {
-    "manifest-version": 3,
+    "manifest_version": 3,
     "name": "Weather Rock",
     "description": "An extension for the weather rock to tell you the weather.",
-    "version": 1.0,
-    "icons": {
-
-    },
+    "version": "1.0",
     "action": {
         "default-title": "Weather Rock",
         "default-popup": "popup.html"
