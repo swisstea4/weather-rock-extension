@@ -52,6 +52,7 @@ body *{
     height: 100%;
 }
 #temp {
+    position: absolute;
     font-size: 50px;
 }
 #tempwords {
@@ -72,4 +73,14 @@ body *{
     position: absolute;
     left: 5%;
     top: 25%;
+
+    font-size: 13.5px;
+}
+
+#humidityWrapper {
+    position: absolute;
+
+    top: 60%;
+
+    font-size: 20px;
 }
