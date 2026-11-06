@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+body *{
+    font-family: 'Roboto';
+}
 #container {
     display: flex;
     align-items: center;
