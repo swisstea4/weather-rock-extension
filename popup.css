@@ -80,7 +80,8 @@ body *{
 #humidityWrapper {
     position: absolute;
 
-    top: 60%;
+    top: 40%;
+    left: 5%;
 
     font-size: 20px;
 }
@@ -88,8 +89,26 @@ body *{
 #windWrapper {
     position: absolute;
 
-    top: 60%;
-    left: 40%;
+    top: 40%;
+    left: 50%;
     
+    font-size: 20px;
+}
+
+#rainChanceWrapper {
+    position: absolute;
+
+    top: 70%;
+    left: 5%;
+
+    font-size: 20px;
+}
+
+#UVindexWrapper {
+    position: absolute;
+
+    top: 70%;
+    left: 50%;
+
     font-size: 20px;
 }
