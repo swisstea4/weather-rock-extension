@@ -4,7 +4,8 @@
 
     gap: 20px;
 
-    height: 300px;
+    width: 500px;
+    height: 250px;
 }
 #stringAndRock {
     display: flex;
@@ -12,7 +13,7 @@
     
     align-items: center;
 
-    width: fit-content;
+    width: 50%;
     height: 100%;
 }
 #string {
