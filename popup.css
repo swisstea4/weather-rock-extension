@@ -56,7 +56,15 @@ body *{
 }
 #tempwords {
     position: absolute;
-    left: 35%;
+    left: 40%;
     top: -5%;
-    font-size: 16px;
+
+    font-size: 15px;
+}
+#feelslike {
+    position: absolute;
+    left: 40%;
+    top: 15%;
+
+    font-size: 13.5px;
 }
