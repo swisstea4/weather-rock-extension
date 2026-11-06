@@ -1,3 +1,11 @@
+#container {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    height: 300px;
+}
 #stringAndRock {
     display: flex;
     flex-direction: column;
@@ -5,7 +13,7 @@
     align-items: center;
 
     width: fit-content;
-    height: 300px;
+    height: 100%;
 }
 #string {
     position: relative;
@@ -18,4 +26,14 @@
     position: relative;
 
     height: 40%;
+}
+
+#vr {
+    position: relative;
+
+    width: 3px;
+    height: 80%;
+
+    background-color: #3a322b;
+
 }
