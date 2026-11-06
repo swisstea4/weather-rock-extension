@@ -22,6 +22,9 @@ body *{
 
     width: 40%;
     height: 100%;
+
+    background-color: #edcdaf;
+    border-radius: 10px;
 }
 #string {
     position: relative;
@@ -50,6 +53,9 @@ body *{
     position: relative;
     width: 60%;
     height: 100%;
+
+    background-color: #edcdaf;
+    border-radius: 10px;
 }
 #temp {
     position: absolute;
