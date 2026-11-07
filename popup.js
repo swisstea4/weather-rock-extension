@@ -1,8 +1,8 @@
-let city = "";
+const API = "22217f197e348a24342b633e6c8ae873";
+let geonameId = "";
 navigator.geolocation.getCurrentPosition(async (position)=>{
     const {latitude, longitude} = position.coords;
-    const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`);
+    const response = await fetch(`http://api.geonames.org/findNearbyPlaceNameJSON?lat=${latitude}&lng=${longitude}&username=swisstea`);
     const data = await response.json();
-
-    city = data.address.city || data.address.town || data.address.suburb || data.address.village;
+    geonameId = data.geonames[0].geonameId;
 });
