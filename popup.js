@@ -13,6 +13,36 @@ function doneLoading() {
     loading.style.display = "none";
     container.style.visibility = "visible";
 }
+function changeRock(data) {
+    const desc = data.weather[0].main;
+    const windy = data.wind.speed;
+    const temp = data.main.temp;
+    const time = new Date().getHours();
+    if (desc === 'Rain' || desc === 'Drizzle' || desc === 'Thunderstorm') {
+        //wet
+    }
+    if (windy >= 8.33) {
+        //swing the rock based on wind speed
+    }
+    if (temp <= 15) {
+        //shiver
+    }
+    if (temp >= 30) {
+        //sweat
+    }
+    if (desc === 'Clear') {
+        //shadow
+    }
+    if (desc === 'Fog') {
+        //fog
+    }
+    if (desc === 'Snow') {
+        //snow
+    }
+    if (time >= 22 || time <= 6) {
+        //sleep
+    }
+}
 navigator.geolocation.getCurrentPosition(async (position)=>{
     const {latitude, longitude} = position.coords;
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}7&lon=${longitude}&units=metric&appid=${API}`);
@@ -26,5 +56,6 @@ navigator.geolocation.getCurrentPosition(async (position)=>{
     wind.textContent = `${data.wind.speed*3.6} km/h`;
     visibility.textContent = `${data.visibility/1000} km`;
     pressure.textContent = `${data.main.pressure} hPa`;
+    changeRock(data);
     doneLoading();
 });
