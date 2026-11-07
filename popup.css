@@ -154,6 +154,14 @@ body *{
     width: 140px;
 }
 
+#rainChanceTitle {
+    display: flex;
+}
+#rainChanceIcon {
+    width: 15%;
+    margin-right: 5px;
+}
+
 #UVindexWrapper {
     position: absolute;
 
