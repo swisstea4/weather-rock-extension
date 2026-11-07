@@ -175,3 +175,11 @@ body *{
     padding: 5px;
     width: 140px;
 }
+
+#UVindexTitle {
+    display: flex;
+}
+#UVindexIcon {
+    width: 16%;
+    margin-right: 6px;
+}
