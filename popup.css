@@ -5,6 +5,9 @@
 body *{
     font-family: 'Roboto';
 }
+#loading {
+    font-size: 30px;
+}
 #container {
     display: flex;
     align-items: center;
@@ -13,6 +16,8 @@ body *{
 
     width: 600px;
     height: 250px;
+
+    visibility: hidden;
 }
 #stringAndRock {
     display: flex;

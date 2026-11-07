@@ -7,6 +7,12 @@ const humidity = document.getElementById("humidity");
 const wind = document.getElementById("wind");
 const visibility = document.getElementById("visibility");
 const pressure = document.getElementById("pressure");
+function doneLoading() {
+    const container = document.getElementById("container");
+    const loading = document.getElementById("loading");
+    loading.style.display = "none";
+    container.style.visibility = "visible";
+}
 navigator.geolocation.getCurrentPosition(async (position)=>{
     const {latitude, longitude} = position.coords;
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}7&lon=${longitude}&units=metric&appid=${API}`);
@@ -20,4 +26,5 @@ navigator.geolocation.getCurrentPosition(async (position)=>{
     wind.textContent = `${data.wind.speed*3.6} km/h`;
     visibility.textContent = `${data.visibility/1000} km`;
     pressure.textContent = `${data.main.pressure} hPa`;
+    doneLoading();
 });
