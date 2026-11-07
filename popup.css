@@ -94,6 +94,11 @@ body *{
     left: 5%;
 
     font-size: 20px;
+
+    background-color: #bf9a7a;
+    border-radius: 10px;
+    padding: 5px;
+    width: 115px;
 }
 
 #windWrapper {
@@ -103,6 +108,11 @@ body *{
     left: 50%;
     
     font-size: 20px;
+
+    background-color: #bf9a7a;
+    border-radius: 10px;
+    padding: 5px;
+    width: 115px;
 }
 
 #rainChanceWrapper {
@@ -112,6 +122,11 @@ body *{
     left: 5%;
 
     font-size: 20px;
+
+    background-color: #bf9a7a;
+    border-radius: 10px;
+    padding: 5px;
+    width: 115px;
 }
 
 #UVindexWrapper {
@@ -121,4 +136,9 @@ body *{
     left: 50%;
 
     font-size: 20px;
+
+    background-color: #bf9a7a;
+    border-radius: 10px;
+    padding: 5px;
+    width: 115px;
 }
