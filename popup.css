@@ -59,6 +59,15 @@ body *{
 
     color: #3a322b;
 }
+
+#weatherIcon {
+    position: absolute;
+    width: 17%;
+    left: 80%;
+    top: 1%;
+
+}
+
 #temp {
     position: absolute;
 
