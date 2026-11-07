@@ -107,7 +107,7 @@ body *{
     background-color: #bf9a7a;
     border-radius: 10px;
     padding: 5px;
-    width: 115px;
+    width: 140px;
 }
 
 #humidityTitle {
@@ -122,14 +122,14 @@ body *{
     position: absolute;
 
     top: 40%;
-    left: 50%;
+    left: 53%;
     
     font-size: 20px;
 
     background-color: #bf9a7a;
     border-radius: 10px;
     padding: 5px;
-    width: 115px;
+    width: 140px;
 }
 
 #windTitle {
@@ -151,19 +151,19 @@ body *{
     background-color: #bf9a7a;
     border-radius: 10px;
     padding: 5px;
-    width: 115px;
+    width: 140px;
 }
 
 #UVindexWrapper {
     position: absolute;
 
     top: 70%;
-    left: 50%;
+    left: 53%;
 
     font-size: 20px;
 
     background-color: #bf9a7a;
     border-radius: 10px;
     padding: 5px;
-    width: 115px;
+    width: 140px;
 }
