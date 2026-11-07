@@ -162,7 +162,7 @@ body *{
     margin-right: 5px;
 }
 
-#UVindexWrapper {
+#pressureWrapper {
     position: absolute;
 
     top: 70%;
@@ -176,10 +176,10 @@ body *{
     width: 140px;
 }
 
-#UVindexTitle {
+#pressureTitle {
     display: flex;
 }
-#UVindexIcon {
-    width: 16%;
+#pressureIcon {
+    width: 15%;
     margin-right: 6px;
 }
