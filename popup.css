@@ -140,7 +140,7 @@ body *{
     margin-right: 6px;
 }
 
-#rainChanceWrapper {
+#visibilityWrapper {
     position: absolute;
 
     top: 70%;
@@ -154,11 +154,11 @@ body *{
     width: 140px;
 }
 
-#rainChanceTitle {
+#visibilityTitle {
     display: flex;
 }
-#rainChanceIcon {
-    width: 15%;
+#visibilityIcon {
+    width: 23%;
     margin-right: 5px;
 }
 
