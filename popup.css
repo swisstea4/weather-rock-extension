@@ -132,6 +132,14 @@ body *{
     width: 115px;
 }
 
+#windTitle {
+    display: flex;
+}
+#windIcon {
+    width: 25%;
+    margin-right: 6px;
+}
+
 #rainChanceWrapper {
     position: absolute;
 
