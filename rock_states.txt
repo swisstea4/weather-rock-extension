@@ -1,0 +1,9 @@
+raining -> wet
+windy -> swing
+cold -> shivering
+hot -> sweating
+sunny -> shadow
+cloudy -> normal
+foggy -> fog
+snow -> white
+night -> sleeping
