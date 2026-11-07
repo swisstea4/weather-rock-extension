@@ -56,9 +56,13 @@ body *{
 
     background-color: #edcdaf;
     border-radius: 10px;
+
+    color: #3a322b;
 }
 #temp {
     position: absolute;
+
+    left: 5%;
     font-size: 50px;
 }
 #tempwords {
@@ -77,7 +81,7 @@ body *{
 }
 #highlow {
     position: absolute;
-    left: 5%;
+    left: 13%;
     top: 25%;
 
     font-size: 13.5px;
