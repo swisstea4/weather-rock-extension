@@ -23,7 +23,8 @@ function changeRock(data) {
         wetrock.style.display = "block";
     }
     if (windy >= 8.33) {
-        //swing the rock based on wind speed
+        const stringAndRock = document.getElementById("stringAndRock");
+        stringAndRock.classList.toggle("swing");
     }
     if (temp <= 15) {
         //shiver

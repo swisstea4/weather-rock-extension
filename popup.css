@@ -20,8 +20,6 @@ body *{
     visibility: hidden;
 }
 #rockCard {
-    display: flex;
-    flex-direction: column;
     position: relative;
     
     align-items: center;
@@ -31,6 +29,34 @@ body *{
 
     background-color: #edcdaf;
     border-radius: 10px;
+}
+#stringAndRock {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    align-items: center;
+
+    width: 340px;
+    height: 100%;
+    transform-origin: top center;
+}
+#stringAndRock::before {
+    display: flex;
+}
+#stringAndRock::after {
+    display: flex;
+}
+@keyframes move {
+    from {
+        transform: rotate(-90deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
+#stringAndRock.swing {
+    animation: move infinite 0.5s alternate ease-in-out;
 }
 #string {
     position: relative;
