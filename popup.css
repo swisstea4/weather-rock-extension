@@ -47,12 +47,16 @@ body *{
 #stringAndRock::after {
     display: flex;
 }
+:root {
+    --swing-angle-left: -90deg;
+    --swing-angle-right: 90deg;
+}
 @keyframes move {
     from {
-        transform: rotate(-90deg);
+        transform: rotate(var(--swing-angle-left));
     }
     to {
-        transform: rotate(90deg);
+        transform: rotate(var(--swing-angle-right));
     }
 }
 #stringAndRock.swing {

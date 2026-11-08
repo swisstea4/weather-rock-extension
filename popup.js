@@ -15,15 +15,18 @@ function doneLoading() {
 }
 function changeRock(data) {
     const desc = data.weather[0].main;
-    const windy = data.wind.speed;
+    const windy = data.wind.speed*3.6;
     const temp = data.main.temp;
     const time = new Date().getHours();
     if (desc === 'Rain' || desc === 'Drizzle' || desc === 'Thunderstorm') {
         const wetrock = document.getElementById("wetrock");
         wetrock.style.display = "block";
     }
-    if (windy >= 8.33) {
+    if (windy >= 30) {
         const stringAndRock = document.getElementById("stringAndRock");
+        const swingAngle = Math.min(windy*0.1, 90);
+        document.documentElement.style.setProperty('--swing-angle-left', `${-1*swingAngle}deg`);
+        document.documentElement.style.setProperty('--swing-angle-right', `${swingAngle}deg`);
         stringAndRock.classList.toggle("swing");
     }
     if (temp <= 15) {
