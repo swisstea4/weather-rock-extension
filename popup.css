@@ -94,6 +94,16 @@ body *{
 
     display: none;
 }
+#sweat {
+    position: absolute;
+
+    width: 6%;
+    left: 33%;
+    top: 160px;
+
+    display: none;
+
+}
 
 #vr {
     position: relative;

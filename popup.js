@@ -34,7 +34,8 @@ function changeRock(data) {
         scarf.style.display = "block";
     }
     if (temp >= 30) {
-        //sweat
+        const sweat = document.getElementById("sweat");
+        sweat.style.display = "block";
     }
     if (desc === 'Clear') {
         //shadow
