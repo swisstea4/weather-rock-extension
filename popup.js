@@ -7,6 +7,10 @@ const humidity = document.getElementById("humidity");
 const wind = document.getElementById("wind");
 const visibility = document.getElementById("visibility");
 const pressure = document.getElementById("pressure");
+
+const guideButton = document.getElementById("guideButton");
+const guideClose = document.getElementById("guideClose");
+
 function doneLoading() {
     const container = document.getElementById("container");
     const loading = document.getElementById("loading");
@@ -73,4 +77,20 @@ navigator.geolocation.getCurrentPosition(async (position)=>{
     pressure.textContent = `${Math.round(data.main.pressure)} hPa`;
     changeRock(data);
     doneLoading();
+});
+
+guideButton.addEventListener("click", ()=>{
+    const guide = document.getElementById("guide");
+    if (guide.style.display === 'none') {
+        guide.style.display = 'flex';
+    }
+    else {
+        guide.style.display = 'none';
+    }
+});
+guideClose.addEventListener("click", ()=>{
+    const guide = document.getElementById("guide");
+    if (guide.style.display === 'flex') {
+        guide.style.display = 'none';
+    }
 });
