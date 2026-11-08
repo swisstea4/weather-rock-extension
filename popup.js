@@ -19,7 +19,8 @@ function changeRock(data) {
     const temp = data.main.temp;
     const time = new Date().getHours();
     if (desc === 'Rain' || desc === 'Drizzle' || desc === 'Thunderstorm') {
-        //wet
+        const wetrock = document.getElementById("wetrock");
+        wetrock.style.display = "block";
     }
     if (windy >= 8.33) {
         //swing the rock based on wind speed
