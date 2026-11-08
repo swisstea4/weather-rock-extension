@@ -30,7 +30,8 @@ function changeRock(data) {
         stringAndRock.classList.toggle("swing");
     }
     if (temp <= 15) {
-        //shiver
+        const scarf = document.getElementById("scarf");
+        scarf.style.display = "block";
     }
     if (temp >= 30) {
         //sweat

@@ -85,6 +85,15 @@ body *{
 
     display: none;
 }
+#scarf {
+    position: absolute;
+
+    width: 50%;
+    left: 10%;
+    top: 80px;
+
+    display: none;
+}
 
 #vr {
     position: relative;
