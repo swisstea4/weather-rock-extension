@@ -130,6 +130,15 @@ body *{
 
     display: none;
 }
+#sleepmask {
+    position: absolute;
+
+    width: 30%;
+    left: 32%;
+    top: 45%;
+
+    display: none;
+}
 
 #vr {
     position: relative;

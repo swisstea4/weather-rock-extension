@@ -54,7 +54,8 @@ function changeRock(data) {
         rock.src = "images/snowrock.png";
     }
     if (time >= 22 || time <= 6) {
-        //sleep
+        const sleepmask = document.getElementById("sleepmask");
+        sleepmask.style.display = "block";
     }
 }
 navigator.geolocation.getCurrentPosition(async (position)=>{
