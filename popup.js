@@ -44,7 +44,8 @@ function changeRock(data) {
         shadow.style.display = "block";
     }
     if (desc === 'Fog') {
-        //fog
+        const fog = document.getElementById("fog");
+        fog.style.display = "block";
     }
     if (desc === 'Snow') {
         //snow

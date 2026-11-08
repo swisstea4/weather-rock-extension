@@ -112,6 +112,15 @@ body *{
 
     display: none;
 }
+#fog {
+    position: absolute;
+
+    width: 50%;
+    left: 26%;
+    top: 100px;
+
+    display: none;
+}
 
 #vr {
     position: relative;
