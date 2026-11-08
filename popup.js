@@ -58,10 +58,10 @@ navigator.geolocation.getCurrentPosition(async (position)=>{
     tempdesc.textContent = data.weather[0].description;
     feelslike.textContent = `Feels like ${Math.round(data.main.feels_like)}°C`;
     highlow.textContent = `H: ${Math.round(data.main.temp_max)} L: ${Math.round(data.main.temp_min)}`
-    humidity.textContent = `${data.main.humidity}%`;
-    wind.textContent = `${data.wind.speed*3.6} km/h`;
-    visibility.textContent = `${data.visibility/1000} km`;
-    pressure.textContent = `${data.main.pressure} hPa`;
+    humidity.textContent = `${Math.round(data.main.humidity)}%`;
+    wind.textContent = `${Math.round(data.wind.speed*3.6)} km/h`;
+    visibility.textContent = `${Math.round(data.visibility/1000)} km`;
+    pressure.textContent = `${Math.round(data.main.pressure)} hPa`;
     changeRock(data);
     doneLoading();
 });
