@@ -48,7 +48,10 @@ function changeRock(data) {
         fog.style.display = "block";
     }
     if (desc === 'Snow') {
-        //snow
+        const snow = document.getElementById("snow");
+        snow.style.display = "block";
+        const rock = document.getElementById("rock");
+        rock.src = "images/snowrock.png";
     }
     if (time >= 22 || time <= 6) {
         //sleep
