@@ -19,7 +19,7 @@ body *{
 
     visibility: hidden;
 }
-#stringAndRock {
+#rockCard {
     display: flex;
     flex-direction: column;
     position: relative;
