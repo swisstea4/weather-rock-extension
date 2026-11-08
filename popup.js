@@ -19,8 +19,8 @@ function changeRock(data) {
     const temp = data.main.temp;
     const time = new Date().getHours();
     if (desc === 'Rain' || desc === 'Drizzle' || desc === 'Thunderstorm') {
-        const wetrock = document.getElementById("wetrock");
-        wetrock.style.display = "block";
+        const watersplash = document.getElementById("watersplash");
+        watersplash.style.display = "block";
     }
     if (windy >= 30) {
         const stringAndRock = document.getElementById("stringAndRock");

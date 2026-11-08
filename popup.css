@@ -75,12 +75,12 @@ body *{
     height: 100px;
 }
 
-#wetrock {
+#watersplash {
     position: absolute;
 
 
-    width: 60%;
-    left: 18%;
+    width: 30%;
+    left: 30%;
     top: 137.5px;
 
     display: none;
