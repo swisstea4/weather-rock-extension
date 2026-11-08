@@ -102,7 +102,15 @@ body *{
     top: 160px;
 
     display: none;
+}
+#shadow {
+    position: absolute;
 
+    width: 50%;
+    left: 30%;
+    top: 305px;
+
+    display: none;
 }
 
 #vr {

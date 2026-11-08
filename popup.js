@@ -17,7 +17,9 @@ function changeRock(data) {
     const desc = data.weather[0].main;
     const windy = data.wind.speed*3.6;
     const temp = data.main.temp;
-    const time = new Date().getHours();
+    const sunrise = new Date(data.sys.sunrise*1000);
+    const sunset = new Date(data.sys.sunset*1000);
+    const time = new Date();
     if (desc === 'Rain' || desc === 'Drizzle' || desc === 'Thunderstorm') {
         const watersplash = document.getElementById("watersplash");
         watersplash.style.display = "block";
@@ -37,8 +39,9 @@ function changeRock(data) {
         const sweat = document.getElementById("sweat");
         sweat.style.display = "block";
     }
-    if (desc === 'Clear') {
-        //shadow
+    if (desc === 'Clear' && time >= sunrise && time <= sunset) {
+        const shadow = document.getElementById("shadow");
+        shadow.style.display = "block";
     }
     if (desc === 'Fog') {
         //fog
