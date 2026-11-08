@@ -1,9 +1,9 @@
 raining -> wet
 windy -> swing
-cold -> shivering
+cold -> scarf & a beanie
 hot -> sweating
 sunny -> shadow
 cloudy -> normal
 foggy -> fog
-snow -> white
-night -> sleeping
+snow -> white & fallen snow
+night -> sleeping mask
