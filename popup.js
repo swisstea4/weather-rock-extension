@@ -7,6 +7,7 @@ const humidity = document.getElementById("humidity");
 const wind = document.getElementById("wind");
 const visibility = document.getElementById("visibility");
 const pressure = document.getElementById("pressure");
+const currentCity = document.getElementById("currentCity");
 
 const guideButton = document.getElementById("guideButton");
 const guideClose = document.getElementById("guideClose");
@@ -94,6 +95,7 @@ async function fetchWeather(url) {
         wind.textContent = `${Math.round(data.wind.speed*3.6)} km/h`;
         visibility.textContent = `${Math.round(data.visibility/1000)} km`;
         pressure.textContent = `${Math.round(data.main.pressure)} hPa`;
+        currentCity.textContent = data.name;
 
         changeRock(data);
     } catch (error) {
