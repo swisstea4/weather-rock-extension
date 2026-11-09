@@ -13,6 +13,12 @@ const guideClose = document.getElementById("guideClose");
 
 const citySearch = document.getElementById("citySearch");
 const cityInput = document.getElementById("cityInput");
+let cityList;
+async function getCityList() {
+    const response = await fetch(chrome.runtime.getURL("city.list.json"));
+    cityList = await response.json();
+}
+
 function doneLoading() {
     const container = document.getElementById("container");
     const manualLocation = document.getElementById("manualLocation");
@@ -104,6 +110,20 @@ navigator.geolocation.getCurrentPosition(async (position)=>{
     showManualLocation();
 });
 
+getCityList().then(()=>{
+    cityInput.addEventListener("input", ()=>{
+        const currentValue = cityInput.value.trim().toLowerCase();
+        const matches = cityList.filter(city => city.name.toLowerCase().startsWith(currentValue)).slice(0, 5);
+        const citySuggestions = document.getElementById("citySuggestions");
+        citySuggestions.innerHTML = "";
+        for (const city of matches) {
+            const option = document.createElement("div");
+            option.textContent = `${city.name}`;
+            citySuggestions.appendChild(option);
+        }
+});
+
+});
 citySearch.addEventListener("click", ()=>{
     const city = cityInput.value.trim();
     fetchWeather(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&units=metric&appid=${API}`);
