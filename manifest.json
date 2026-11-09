@@ -9,5 +9,8 @@
     "action": {
         "default_title": "Weather Rock",
         "default_popup": "popup.html"
-    }
+    },
+    "permissions": [
+        "geolocation"
+    ]
 }
