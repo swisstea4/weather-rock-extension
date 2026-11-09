@@ -64,7 +64,7 @@ function changeRock(data) {
 }
 navigator.geolocation.getCurrentPosition(async (position)=>{
     const {latitude, longitude} = position.coords;
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}7&lon=${longitude}&units=metric&appid=${API}`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${API}`);
     const data = await response.json();
     console.log(data);
     temp.textContent = `${Math.round(data.main.temp)}°C`;
