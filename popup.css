@@ -338,6 +338,7 @@ body *{
 #manualLocation p {
     font-size: 20px;
     text-align: center;
+    color: #3a322b;
 }
 #inputRow {
     position: relative;
@@ -348,5 +349,20 @@ body *{
 }
 #citySuggestions div{
     border: 1px solid black;
+    cursor: pointer;
+}
+#cityInput {
+    background-color: #bf9a7a;
+    border: 2px solid #3a322b;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 15px;
+}
+#citySearch {
+    background-color: #bf9a7a;
+    border: 2px solid #3a322b;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 15px;
     cursor: pointer;
 }
