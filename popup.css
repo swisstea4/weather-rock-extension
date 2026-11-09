@@ -346,3 +346,7 @@ body *{
     left: 50%;
     transform: translateX(-50%);
 }
+#citySuggestions div{
+    border: 1px solid black;
+    cursor: pointer;
+}

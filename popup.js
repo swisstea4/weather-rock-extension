@@ -119,8 +119,15 @@ getCityList().then(()=>{
         for (const city of matches) {
             const option = document.createElement("div");
             option.textContent = `${city.name}`;
+            option.className = "cityOptions";
             citySuggestions.appendChild(option);
         }
+});
+document.addEventListener("click", (event)=>{
+    if (event.target.classList.contains("cityOptions")) {
+        const city = event.target.textContent;
+        cityInput.value = city;
+    }
 });
 
 });
