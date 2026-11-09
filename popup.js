@@ -79,7 +79,7 @@ async function fetchWeather(url) {
         if (!response.ok) {
             throw new Error("Weather data unavailable");
         }
-        const data = await response.json;
+        const data = await response.json();
         temp.textContent = `${Math.round(data.main.temp)}°C`;
         tempdesc.textContent = data.weather[0].description;
         feelslike.textContent = `Feels like ${Math.round(data.main.feels_like)}°C`;
