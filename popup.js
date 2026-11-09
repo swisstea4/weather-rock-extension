@@ -11,12 +11,14 @@ const pressure = document.getElementById("pressure");
 const guideButton = document.getElementById("guideButton");
 const guideClose = document.getElementById("guideClose");
 
+const citySearch = document.getElementById("citySearch");
+const cityInput = document.getElementById("cityInput");
 function doneLoading() {
     const container = document.getElementById("container");
     const manualLocation = document.getElementById("manualLocation");
     const loading = document.getElementById("loading");
     loading.style.display = "none";
-    manualLocation.style.visibility = "none";
+    manualLocation.style.display = "none";
     container.style.visibility = "visible";
 }
 function changeRock(data) {
@@ -100,6 +102,11 @@ navigator.geolocation.getCurrentPosition(async (position)=>{
     fetchWeather(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${API}`);
 }, ()=>{
     showManualLocation();
+});
+
+citySearch.addEventListener("click", ()=>{
+    const city = cityInput.value.trim();
+    fetchWeather(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&units=metric&appid=${API}`);
 });
 
 guideButton.addEventListener("click", ()=>{
