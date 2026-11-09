@@ -57,7 +57,7 @@ function changeRock(data) {
         const rock = document.getElementById("rock");
         rock.src = "images/snowrock.png";
     }
-    if (time >= 22 || time <= 6) {
+    if (time.getHours() >= 22 || time.getHours() <= 6) {
         const sleepmask = document.getElementById("sleepmask");
         sleepmask.style.display = "block";
     }
