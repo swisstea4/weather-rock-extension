@@ -13,8 +13,10 @@ const guideClose = document.getElementById("guideClose");
 
 function doneLoading() {
     const container = document.getElementById("container");
+    const manualLocation = document.getElementById("manualLocation");
     const loading = document.getElementById("loading");
     loading.style.display = "none";
+    manualLocation.style.visibility = "none";
     container.style.visibility = "visible";
 }
 function changeRock(data) {
@@ -62,21 +64,42 @@ function changeRock(data) {
         sleepmask.style.display = "block";
     }
 }
+
+function showManualLocation() {
+    const loading = document.getElementById("loading");
+    const manualLocation = document.getElementById("manualLocation");
+    loading.style.display = "none";
+    manualLocation.style.display = "block";
+}
+async function fetchWeather(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error("Weather data unavailable");
+        }
+        const data = await response.json;
+        temp.textContent = `${Math.round(data.main.temp)}°C`;
+        tempdesc.textContent = data.weather[0].description;
+        feelslike.textContent = `Feels like ${Math.round(data.main.feels_like)}°C`;
+        highlow.textContent = `H: ${Math.round(data.main.temp_max)} L: ${Math.round(data.main.temp_min)}`
+        humidity.textContent = `${Math.round(data.main.humidity)}%`;
+        wind.textContent = `${Math.round(data.wind.speed*3.6)} km/h`;
+        visibility.textContent = `${Math.round(data.visibility/1000)} km`;
+        pressure.textContent = `${Math.round(data.main.pressure)} hPa`;
+
+        changeRock(data);
+    } catch (error) {
+        console.log(error);
+        showManualLocation();
+    } finally {
+        doneLoading();
+    }
+}
 navigator.geolocation.getCurrentPosition(async (position)=>{
     const {latitude, longitude} = position.coords;
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${API}`);
-    const data = await response.json();
-    console.log(data);
-    temp.textContent = `${Math.round(data.main.temp)}°C`;
-    tempdesc.textContent = data.weather[0].description;
-    feelslike.textContent = `Feels like ${Math.round(data.main.feels_like)}°C`;
-    highlow.textContent = `H: ${Math.round(data.main.temp_max)} L: ${Math.round(data.main.temp_min)}`
-    humidity.textContent = `${Math.round(data.main.humidity)}%`;
-    wind.textContent = `${Math.round(data.wind.speed*3.6)} km/h`;
-    visibility.textContent = `${Math.round(data.visibility/1000)} km`;
-    pressure.textContent = `${Math.round(data.main.pressure)} hPa`;
-    changeRock(data);
-    doneLoading();
+    fetchWeather(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${API}`);
+}, ()=>{
+    showManualLocation();
 });
 
 guideButton.addEventListener("click", ()=>{

@@ -328,3 +328,21 @@ body *{
 
     cursor: pointer;
 }
+
+#manualLocation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#manualLocation p {
+    font-size: 20px;
+    text-align: center;
+}
+#inputRow {
+    position: relative;
+
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+}
