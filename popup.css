@@ -5,6 +5,10 @@
 body *{
     font-family: 'Roboto';
 }
+body {
+    width: 700px;
+    height: 350px;
+}
 #loading {
     font-size: 30px;
 }
@@ -16,8 +20,6 @@ body *{
 
     width: 700px;
     height: 350px;
-
-    visibility: hidden;
 }
 #rockCard {
     position: relative;
@@ -296,12 +298,19 @@ body *{
     width: 15%;
     margin-right: 6px;
 }
-#currentCity {
+#cityDetails {
     position: absolute;
+    display: flex;
+    gap: 3px;
     bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 15px;
+}
+#changeCity {
+    color: #0000EE;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #guide {
@@ -337,9 +346,11 @@ body *{
 }
 
 #manualLocation {
-    position: absolute;
-    top: 50%;
+    position: relative;
+    width: 410px;
+    height: 90px;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
 }
 #manualLocation p {

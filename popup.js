@@ -8,6 +8,7 @@ const wind = document.getElementById("wind");
 const visibility = document.getElementById("visibility");
 const pressure = document.getElementById("pressure");
 const currentCity = document.getElementById("currentCity");
+const changeCity = document.getElementById("changeCity");
 
 const guideButton = document.getElementById("guideButton");
 const guideClose = document.getElementById("guideClose");
@@ -26,7 +27,7 @@ function doneLoading() {
     const loading = document.getElementById("loading");
     loading.style.display = "none";
     manualLocation.style.display = "none";
-    container.style.visibility = "visible";
+    container.style.display = "flex";
 }
 function changeRock(data) {
     const desc = data.weather[0].main;
@@ -74,10 +75,14 @@ function changeRock(data) {
     }
 }
 
-function showManualLocation() {
+function showManualLocation(message) {
+    const container = document.getElementById("container");
     const loading = document.getElementById("loading");
     const manualLocation = document.getElementById("manualLocation");
+    const manualLocationMessage = manualLocation.querySelector('p');
+    container.style.display = "none";
     loading.style.display = "none";
+    manualLocationMessage.textContent = message;
     manualLocation.style.display = "block";
 }
 async function fetchWeather(url) {
@@ -98,18 +103,17 @@ async function fetchWeather(url) {
         currentCity.textContent = data.name;
 
         changeRock(data);
+        doneLoading();
     } catch (error) {
         console.log(error);
-        showManualLocation();
-    } finally {
-        doneLoading();
+        showManualLocation("Couldn't get your location. Enter a city instead:");
     }
 }
 navigator.geolocation.getCurrentPosition(async (position)=>{
     const {latitude, longitude} = position.coords;
     fetchWeather(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${API}`);
 }, ()=>{
-    showManualLocation();
+    showManualLocation("Couldn't get your location. Enter a city instead:");
 });
 
 getCityList().then(()=>{
@@ -136,6 +140,10 @@ document.addEventListener("click", (event)=>{
 citySearch.addEventListener("click", ()=>{
     const city = cityInput.value.trim();
     fetchWeather(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&units=metric&appid=${API}`);
+});
+
+changeCity.addEventListener("click", ()=>{
+    showManualLocation("Change your city:");
 });
 
 guideButton.addEventListener("click", ()=>{

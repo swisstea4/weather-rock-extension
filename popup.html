@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="loading">Loading...</div>
-    <div id="container">
+    <div id="container" style="display: none">
         <div id="rockCard">
             <div id="stringAndRock">
                 <img id="string" src="images/string.png">
@@ -60,7 +60,10 @@
                 </div>
                 <div id="pressure"></div>
             </div>
-            <div id="currentCity"></div>
+            <div id="cityDetails">
+                <div id="currentCity"></div>
+                <div id="changeCity">(change)</div>
+            </div>
         </div>
     </div>
     <div id="guide" style="display: none">
@@ -106,7 +109,7 @@
         <img id="guideClose" src="images/guideClose.png">
     </div>
     <div id="manualLocation" style="display:none">
-        <p>Couldn't get your location. Enter a city instead:</p>
+        <p></p>
         <div id="inputRow">
             <div id="citySuggestions"></div>
             <input id="cityInput" type="text">
