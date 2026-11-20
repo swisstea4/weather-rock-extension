@@ -302,7 +302,7 @@ body {
     position: absolute;
     display: flex;
     gap: 3px;
-    bottom: 5px;
+    bottom: 23px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 15px;
@@ -311,6 +311,13 @@ body {
     color: #0000EE;
     text-decoration: underline;
     cursor: pointer;
+}
+#openWeatherCredits {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
 }
 
 #guide {
